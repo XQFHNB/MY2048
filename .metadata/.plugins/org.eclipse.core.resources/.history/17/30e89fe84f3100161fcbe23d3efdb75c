@@ -1,0 +1,31 @@
+package com.project.my2048;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
+
+
+public class AtyMain extends Activity {
+	private TextView tvScore;
+	private int score=0;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_aty_main);
+        tvScore=(TextView) findViewById(R.id.tvScore);
+    }
+    private void clearScore(){
+    	score=0;
+    	showScore();
+    }
+    private void showScore(){
+    	tvScore.setText(score+"");
+    }
+    private void addScore(int s){
+    	score+=s;
+    	showScore();
+    }
+   
+}
