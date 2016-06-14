@@ -9,9 +9,9 @@ public class AtyMain extends Activity {
 	private int score = 0;
 	private static AtyMain atymain = null;
 /**
- * è§£é‡Šä¸€ä¸‹ä¸ºä»€ä¹ˆè¦è¿™æ ·åšï¼Œä¸ºä»€ä¹ˆè¦å¼„å‡ºä¸€ä¸ªAtyMainç±»çš„å®žä¾‹æ¥
- * å¤§æ¦‚æ˜¯æˆ‘ä»¬éœ€è¦åœ¨ä¸»æ´»åŠ¨çš„ç•Œé¢ä¸Šæ˜¾ç¤ºåˆ†æ•°ï¼Œä½†æ˜¯æˆ‘ä»¬éœ€è¦ä¸€ä¸ªä¼ é€é—¨ï¼Œå¯ä»¥é€šè¿‡è¿™æ ·çš„æ–¹å¼æ‹¿åˆ°ä¸»æ´»åŠ¨çš„ä¸€ä¸ªå®žä¾‹è¿›è¡Œæ˜¾ç¤ºï¼Œï¼ˆå¯ä»¥è¿™æ ·ç†è§£ï¼Œä½†æ˜¯
- * å¹¶æ²¡æœ‰é€ å‡ºä¸€ä¸ªå®žä¾‹æ¥ï¼Œåæ­£å¤§è‡´å°±æ˜¯è¿™ä¸ªæ„æ€ï¼‰
+ * ½âÊÍÒ»ÏÂÎªÊ²Ã´ÒªÕâÑù×ö£¬ÎªÊ²Ã´ÒªÅª³öÒ»¸öAtyMainÀàµÄÊµÀýÀ´
+ * ´ó¸ÅÊÇÎÒÃÇÐèÒªÔÚÖ÷»î¶¯µÄ½çÃæÉÏÏÔÊ¾·ÖÊý£¬µ«ÊÇÎÒÃÇÐèÒªÒ»¸ö´«ËÍÃÅ£¬¿ÉÒÔÍ¨¹ýÕâÑùµÄ·½Ê½ÄÃµ½Ö÷»î¶¯µÄÒ»¸öÊµÀý½øÐÐÏÔÊ¾£¬£¨¿ÉÒÔÕâÑùÀí½â£¬µ«ÊÇ
+ * ²¢Ã»ÓÐÔì³öÒ»¸öÊµÀýÀ´£¬·´Õý´óÖÂ¾ÍÊÇÕâ¸öÒâË¼£©
  */
 	public AtyMain() {
 		atymain = this;

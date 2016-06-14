@@ -6,8 +6,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 public class Card extends FrameLayout {
-	private int num = 0;// Åc¿¨Æ¬½‰¶¨µÄ”µ×Ö
-	private TextView label;// ï@Ê¾”µ×ÖµÄ¹¤¾ß
+	private int num = 0;// èˆ‡å¡ç‰‡ç¶å®šçš„æ•¸å­—
+	private TextView label;// é¡¯ç¤ºæ•¸å­—çš„å·¥å…·
 
 	public int getNum() {
 		return num;
@@ -16,38 +16,38 @@ public class Card extends FrameLayout {
 	public void setNum(int num) {
 		this.num = num;
 		if (num<=0) {
-			label.setText("");//³õÊ¼½«ËûÃÇ¶¼ÉèÖÃÎªÁã£¬¼´ÔÚUIÖĞ³ÊÏÖ¿Õ¿¨Æ¬
+			label.setText("");//åˆå§‹å°†ä»–ä»¬éƒ½è®¾ç½®ä¸ºé›¶ï¼Œå³åœ¨UIä¸­å‘ˆç°ç©ºå¡ç‰‡
 		}
 		else {
-			label.setText(num + "");// ÒòÎªÎÒÃÇµÄsetText£¨£©·½·¨ÊÇ½ÓÊÕStringÀàĞÍµÄ²ÎÊı
+			label.setText(num + "");// å› ä¸ºæˆ‘ä»¬çš„setTextï¼ˆï¼‰æ–¹æ³•æ˜¯æ¥æ”¶Stringç±»å‹çš„å‚æ•°
 		}
 	}
 
 	public Card(Context context) {
 		super(context);
 	
-		label = new TextView(getContext());// ÔÚ˜‹Ôì·½·¨ÑYÃæßMĞĞÒ»‚€³õÊ¼»¯,ŒWÁ•ÊÇÈçºÎÔÚjavaÔ´´aÖĞŒ‘UIµÄ
-		label.setTextSize(32);// ÔOÖÃ”µ×ÖÎÄ±¾´óĞ¡
-		label.setGravity(Gravity.CENTER);//½«viewÖĞµÄ×Ö·ÅÔÚÖĞ¼ä
-		label.setBackgroundColor(0x33ffffff);//¸øÃ¿¸öĞ¡¿¨Æ¬ÉÏ¸öÉ«£¬
-		LayoutParams lp = new LayoutParams(-1, -1);//  ‘Ê²üNÕfÑ¾Ö…¢”µí¿ØÖÆ•ş¸ü¼Ó·½±ã£¬-1-1µÄÒâË¼¾ÍÊÇÌî³äMÕû‚€¸¸¼‰ÈİÆ÷
-		lp.setMargins(10, 10, 0, 0);//³ä·Ö·¢»ÓÁË¿ØÖÆ£¬½âÊÍÁËÉÏÒ»¾äµÄ¿ØÖÆ¸ü¼Ó·½±ã
-//		lp.setMargins(left, top, right, bottom),ÎªÊ²Ã´ÉÏÃæµÄÓï¾äÃ»ÓĞ½«ºóÃæÁ½¸öÊı×ÖÌîÂú£¬×ĞÏ¸·ÖÎö£¬ÈôÌîºÃ¾ÍÊÇÁ½¸ö¾àÀëÁË
+		label = new TextView(getContext());// åœ¨æ§‹é€ æ–¹æ³•è£é¢é€²è¡Œä¸€å€‹åˆå§‹åŒ–,å­¸ç¿’æ˜¯å¦‚ä½•åœ¨javaæºç¢¼ä¸­å¯«UIçš„
+		label.setTextSize(32);// è¨­ç½®æ•¸å­—æ–‡æœ¬å¤§å°
+		label.setGravity(Gravity.CENTER);//å°†viewä¸­çš„å­—æ”¾åœ¨ä¸­é—´
+		label.setBackgroundColor(0x33ffffff);//ç»™æ¯ä¸ªå°å¡ç‰‡ä¸Šä¸ªè‰²ï¼Œ
+		LayoutParams lp = new LayoutParams(-1, -1);// çˆ²ä»€éº¼èªªä½ˆå±€åƒæ•¸ä¾†æ§åˆ¶æœƒæ›´åŠ æ–¹ä¾¿ï¼Œ-1-1çš„æ„æ€å°±æ˜¯å¡«å……æ»¿æ•´å€‹çˆ¶ç´šå®¹å™¨
+		lp.setMargins(10, 10, 0, 0);//å……åˆ†å‘æŒ¥äº†æ§åˆ¶ï¼Œè§£é‡Šäº†ä¸Šä¸€å¥çš„æ§åˆ¶æ›´åŠ æ–¹ä¾¿
+//		lp.setMargins(left, top, right, bottom),ä¸ºä»€ä¹ˆä¸Šé¢çš„è¯­å¥æ²¡æœ‰å°†åé¢ä¸¤ä¸ªæ•°å­—å¡«æ»¡ï¼Œä»”ç»†åˆ†æï¼Œè‹¥å¡«å¥½å°±æ˜¯ä¸¤ä¸ªè·ç¦»äº†
 		addView(label, lp);
-		setNum(0);//ÎªÊ²Ã´Õâ¸öÒª·ÅÔÚÕâÀï£¬¶ø·ÅÔÚÇ°ÃæÈ´²»ĞĞ£¬ÎÒÏë¿ÉÄÜÊÇÒòÎª£¬setNum()·½·¨ÖĞ»¹ÓĞsetText()Õâ¸ö·½·¨£¬Õâ¸ö·½·¨ÊÇÔÚĞ´UIÊ±¸øµÄ£¬Á¬view¶¼Ã»ÓĞ¿Ï¶¨²»¿ÉÒÔ
-//		setText()ÁË£¬Òò´ËÒª·Åµ½addView£¨£©·½·¨ºóÃæ
+		setNum(0);//ä¸ºä»€ä¹ˆè¿™ä¸ªè¦æ”¾åœ¨è¿™é‡Œï¼Œè€Œæ”¾åœ¨å‰é¢å´ä¸è¡Œï¼Œæˆ‘æƒ³å¯èƒ½æ˜¯å› ä¸ºï¼ŒsetNum()æ–¹æ³•ä¸­è¿˜æœ‰setText()è¿™ä¸ªæ–¹æ³•ï¼Œè¿™ä¸ªæ–¹æ³•æ˜¯åœ¨å†™UIæ—¶ç»™çš„ï¼Œè¿viewéƒ½æ²¡æœ‰è‚¯å®šä¸å¯ä»¥
+//		setText()äº†ï¼Œå› æ­¤è¦æ”¾åˆ°addViewï¼ˆï¼‰æ–¹æ³•åé¢
 		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * Œ¦¿¨Æ¬ÔOÖÃÒ»‚€ÅĞ”àµÄ·½·¨
+	 * å°å¡ç‰‡è¨­ç½®ä¸€å€‹åˆ¤æ–·çš„æ–¹æ³•
 	 * 
 	 * @param o
 	 * @return
 	 */
 	public boolean equals(Card o) {
 		// TODO Auto-generated method stub
-		return getNum() == o.getNum();// Ö»ÓÃÅĞ”àƒÉ‚€Œ¦ÏóµÄ½‰¶¨”µ×ÖÊÇ·ñÏàÍ¬¾Í¿ÉÒÔ¿´ƒÉˆ¿¨Æ¬ÊÇ²»ÊÇ¿ÉÒÔßMĞĞß¡¯B
+		return getNum() == o.getNum();// åªç”¨åˆ¤æ–·å…©å€‹å°è±¡çš„ç¶å®šæ•¸å­—æ˜¯å¦ç›¸åŒå°±å¯ä»¥çœ‹å…©å¼µå¡ç‰‡æ˜¯ä¸æ˜¯å¯ä»¥é€²è¡Œæ‘ºç–Š
 	}
 
 }
